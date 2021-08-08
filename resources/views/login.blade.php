@@ -16,13 +16,13 @@
         <form action="logs" method="post">
             @csrf
             <div class="field">
-                <input type="email" name="email" placeholder="Enter Email id">
+                <input type="email" name="email" placeholder="Enter Email id" value="{{ old('email') }}">
                 @error('email')
                 <div class="errormsg">{{ $message }}</div>
                 @enderror
             </div>
             <div class="field">
-                <input type="password" name="password" placeholder="Enter password">
+                <input type="password" name="password" placeholder="Enter password" value="{{ old('password') }}">
                 @error('password')
                 <div class="errormsg">{{ $message }}</div>
                 @enderror

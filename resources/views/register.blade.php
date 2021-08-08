@@ -16,32 +16,32 @@
         <form action="store" method="post">
                 @csrf
                 <div class="field">
-                    <input type="text" name="name" placeholder="Enter name">
+                    <input type="text" name="name" placeholder="Enter name" value="{{ old('name') }}">
                     @error('name')
                     <div class="errormsg">{{ $message }}</div>
                     @enderror   
                 </div>
                 <div class="field">
-                    <input type="email" name="email" placeholder="Enter Email">
+                    <input type="email" name="email" placeholder="Enter Email" value="{{ old('email') }}">
                     @error('email')
                     <div class="errormsg">{{ $message }}</div>
                     @enderror
                     <div class="errormsg">{{ Session::get('emailerrmsg') }}</div>
                 </div>
                 <div class="field">
-                    <input type="text" name="phone" placeholder="Enter Phone no">
+                    <input type="text" name="phone" placeholder="Enter Phone no"  value="{{ old('phone') }}">
                     @error('phone')
                     <div class="errormsg">{{ $message }}</div>
                     @enderror
                 </div>
                 <div class="field">
-                    <input type="password" name="password" placeholder="Enter password">
+                    <input type="password" name="password" placeholder="Enter password"  value="{{ old('password') }}">
                     @error('password')
                     <div class="errormsg">{{ $message }}</div>
                     @enderror
                 </div>
                 <div class="field">
-                    <input type="password" name="cpassword" placeholder="Confirm password">
+                    <input type="password" name="cpassword" placeholder="Confirm password"  value="{{ old('cpassword') }}">
                     @error('cpassword')
                     <div class="errormsg">{{ $message }}</div>
                     @enderror
